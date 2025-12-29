@@ -1,0 +1,663 @@
+/* ------------------------------
+   GENERAL
+------------------------------ */
+
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #060b18;
+  color: #fff;
+}
+
+.hero-section {
+  padding: 90px 0;
+}
+
+.hero-container {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* TEXT LEFT */
+.hero-text h1 {
+  font-size: 58px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #ffffff;
+}
+
+.hero-description {
+  width: 75%;
+  line-height: 1.7;
+  font-size: 15px;
+  margin-bottom: 30px;
+  color: #cfcfcf;
+}
+
+.hero-location {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #d5d5d5;
+}
+
+.hero-location i {
+  margin-right: 8px;
+  color: #bfbfbf;
+}
+
+.hero-status {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  background: #4caf50;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* CV BUTTON */
+.cv-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background: #e1e1e1;
+}
+
+/* RIGHT IMAGE EXACT STYLE */
+.hero-image-box {
+  position: relative;
+   width: 260px;              /* adjust size */
+  height: 260px; 
+}
+
+.bg-box {
+  width: 260px;
+  height: 300px;
+  background: #1a2234;
+  position: center;
+  right: -30px;
+  top: 20px;
+  border-radius: 4px;
+}
+
+.hero-image-box img {
+  position: absolute;   /* allows image to move/scale inside box */
+  top: -10px;           /* move image up a bit */
+  left: -3px;          /* move image left a bit */
+  width: 260px;         /* increase image width */
+  height: 310px;        /* increase image height */
+  object-fit: cover;    /* keeps aspect ratio */
+  border-radius: 15px;
+  z-index: 2;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-description {
+    width: 100%;
+  }
+
+  .bg-box,
+  .hero-image-box img {
+    width: 220px;
+    height: 260px;
+  }
+
+  .bg-box {
+    right: -15px;
+  }
+}
+
+/* ------------------------------
+   ABOUT SECTION
+------------------------------ */
+.about-section {
+  width: 85%;
+  margin: 0 auto;
+  padding: 80px 0;
+  background-color: #060b18;
+  color: #fff;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* LEFT IMAGE */
+.about-image-box img {
+  width: 350px;
+  height: 420px;
+  border-radius: 8px;
+  object-fit: cover;
+   margin-top: 80px;
+}
+
+/* RIGHT TEXT */
+.about-text {
+  width: 65%;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #cfcfcf;
+}
+
+.about-text p {
+  margin-bottom: 25px;
+}
+
+.about-subtitle {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* BULLET LISTS */
+.about-lists {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.about-lists ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-size: 15px;
+  color: #d4d4d4;
+}
+
+.about-lists li {
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image-box img {
+    width: 260px;
+    margin: auto;
+  }
+
+  .about-text {
+    width: 100%;
+  }
+
+  .about-lists {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ------------------------------
+   SKILLS SECTION
+------------------------------ */
+.skills-section {
+  background: #0f172a;
+  padding: 70px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.skills-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.skills-subtitle {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.skill-box {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-box img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.skill-box p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.skill-box:hover {
+  transform: translateY(-8px);
+}
+
+/* ------------------------------
+   EXPERIENCE SECTION
+------------------------------ */
+.experience-section {
+  background: #0d1323;
+  padding: 70px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.experience-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.experience-subtitle {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.experience-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exp-card {
+  background: #192033;
+  width: 70%;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.exp-company {
+  font-size: 18px;
+  color: #4ade80;
+  font-weight: 600;
+}
+
+.exp-role {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.exp-year {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.exp-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* ------------------------------
+   SERVICES SECTION
+------------------------------ */
+.services-section {
+  padding: 80px 0;
+  background-color: #0f172a;
+}
+
+.services-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 70px;
+}
+
+.services-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 60px;
+  grid-column-gap: 60px;
+}
+
+.service-box {
+  color: #ffffff;
+}
+
+.service-box h3 {
+  font-size: 22px;
+  margin: 15px 0 12px;
+  font-weight: 500;
+}
+
+.service-box p {
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 90%;
+  color: #cbd5e1;
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+/* ------------------------------
+   INTERNSHIP SECTION
+------------------------------ */
+.internship-section {
+  background-color: #0f1624;
+  padding: 80px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.internship-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  width: 80%;
+  margin: auto;
+}
+
+.internship-card {
+  background-color: #101828;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: left;
+  transition: 0.3s ease;
+  border: 1px solid #1f2937;
+}
+
+.internship-card:hover {
+  transform: translateY(-8px);
+  border-color: #34d399;
+}
+
+.icon-box {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #34d399;
+}
+
+.internship-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.internship-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .internship-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
+.navbar {
+  width: 100%;
+  background-color: #0f1624;
+  padding: 15px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h2 {
+  color: #34d399;
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #34d399;
+}
+
+.cv-btn {
+  background: #fff;
+  padding: 10px 18px;
+  color: #0f1624;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cv-btn:hover {
+  background-color: #34d399;
+  color: #0f1624;
+}
+
+/* Mobile Menu */
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #111827;
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .nav-links.active {
+    display: block;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .cv-btn {
+    display: none;
+  }
+}
+
+/* ------------------------------
+   IMAGE ENHANCEMENTS
+------------------------------ */
+
+/* General image styles */
+img {
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Hover zoom effect */
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero image specific */
+.hero-image-box img {
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* About image specific */
+.about-image-box img {
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Skill icons */
+.skill-box img {
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Internship icons hover */
+.internship-card .icon-box {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.internship-card:hover .icon-box {
+  transform: scale(1.2);
+  color: #10b981;
+}
+
+
+.contact-section {
+  min-height: 90vh;
+  background: linear-gradient(180deg, #0b1220, #0a0f1c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.contact-container h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  color: #9aa4b2;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px 0;
+  font-size: 16px;
+}
+
+.contact-info i {
+  font-size: 18px;
+}
+
+.address {
+  max-width: 600px;
+  margin: 25px auto;
+  color: #cfd6e1;
+}
+
+.platform-text {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #9aa4b2;
+}
+
+.social-links {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.social-links div {
+  margin-bottom: 20px;
+}
+
+.social-links p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.social-links a {
+  font-size: 14px;
+  color: #9aa4b2;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #00ff66;
+  text-decoration: underline;
+}
+
